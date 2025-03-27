@@ -18,7 +18,7 @@ const {
 return m_size;
 }
 
-bool Map::insert(const std::string& key, const double& value)
+bool Map::insert(const KeyType& key, const ValueType& value)
 {
 if (m_size == DEFAULT_MAX_ITEMS)
 	return false;
@@ -32,7 +32,7 @@ m_size++;
 return true;
 }
 
-bool Map::update(const std::string& key, const double& value)
+bool Map::update(const KeyType& key, const ValueType& value)
 {
 for (int i = 0; i < m_size; i++) {
 	if (m_pairs[i].key == key) {
@@ -43,14 +43,14 @@ for (int i = 0; i < m_size; i++) {
 return false;
 }
 
-bool Map::insertOrUpdate(const std::string& key, const double& value) {
+bool Map::insertOrUpdate(const KeyType& key, const ValueType& value) {
 if (contains(key))
 	return update(key, value);
 else
 	return insert(key, value);
 }
 
-bool Map::erase(const std::string& key) {
+bool Map::erase(const KeyType& key) {
 for (int i = 0; i < m_size; i++) {
 	if (m_pairs[i].key == key) {
 		m_pairs[i] = m_pairs[m_size - 1];
@@ -61,7 +61,7 @@ for (int i = 0; i < m_size; i++) {
 return false;
 }
 
-bool Map::contains(const std::string& key) const{
+bool Map::contains(const KeyType& key) const{
 for (int i = 0; i < m_size; i++) {
 	if (m_pairs[i].key == key)
 		return true;
@@ -69,7 +69,7 @@ for (int i = 0; i < m_size; i++) {
 return false;
 }
 
-bool Map::get(const std::string& key, double& value)
+bool Map::get(const KeyType& key, ValueType& value)
 const {
 for (int i = 0; i < m_size; i++) {
 	if (m_pairs[i].key == key) {
@@ -80,7 +80,7 @@ for (int i = 0; i < m_size; i++) {
 return false;
 }
 
-bool Map::get(int i, std::string& key, double& value)
+bool Map::get(int i, KeyType& key, ValueType& value)
 const{
 if (i >= 0 && i < m_size) {
 	key = m_pairs[i].key;
