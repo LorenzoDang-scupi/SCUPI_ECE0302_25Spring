@@ -10,8 +10,14 @@
 
 **Project 1:** Map Class Implementation
 
-**Lecture 3:** TBA
+**Lecture 3:** Advanced Usages of Pointers
+
+**Lecture 4:** Stacks and Queues
+
+**Lecture 5:** Sorting Algorithms
+
+**Lecture 6:** TBA
 
 *The code is for your reference, I would appreciate any advice.*
 
-**Contact: dzh998@outlook.com**
+**Contact: dzh998@outlook.com/dangzehao@vt.edu**
