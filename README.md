@@ -16,6 +16,8 @@
 
 **Lecture 5:** Sorting Algorithms
 
+**Project 2:** Sorting & Vector Applications
+
 **Lecture 6:** TBA
 
 *The code is for your reference, I would appreciate any advice.*
